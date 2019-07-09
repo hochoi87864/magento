@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <frontend>
+        <routers>
+            <DtnOffice>
+                <use>standard</use>
+                <args>
+                    <module>trung_DtnOffice</module>
+                    <frontName>dtn</frontName>
+                </args>
+            </DtnOffice>
+        </routers>
+    </frontend>
+    <global>
+        <models>
+            <DtnOffice>
+                <class>Somnath_Blog_Model</class>
+                <resourceModel>somnath_blog_resource</resourceModel>
+            </DtnOffice>
+            <somnath_blog_resource>
+                <class>Somnath_Blog_Model_Resource</class>
+                <entities>
+                    <blog>
+                        <table>blog</table>
+                    </blog>
+                </entities>
+            </somnath_blog_resource>
+        </models>
+        <resources>
+            <somnath_blog_setup>
+                <setup>
+                    <module>Somnath_Blog</module>
+                    <class>Mage_Core_Model_Resource_Setup</class> <!-- optional -->
+                </setup>
+            </somnath_blog_setup>
+        </resources>
+    </global>
+</config>

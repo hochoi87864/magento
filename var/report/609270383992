@@ -1,0 +1,20 @@
+a:5:{i:0;s:141:"Invalid method Mage_Core_Block_Text_List::addLink(Array
+(
+    [0] => Contact Us
+    [1] => contacts
+    [2] => Contact Us
+    [3] => true
+)
+)";i:1;s:1606:"#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(348): Varien_Object->__call('addLink', Array)
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(214): Mage_Core_Model_Layout->_generateAction(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Layout.php(210): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#5 C:\xampp\htdocs\magento\app\code\local\onemoretime\one\controllers\twoController.php(10): Mage_Core_Controller_Varien_Action->loadLayout()
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): onemoretime_one_twoController->threeAction()
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('three')
+#8 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#10 C:\xampp\htdocs\magento\app\Mage.php(686): Mage_Core_Model_App->run(Array)
+#11 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#12 {main}";s:3:"url";s:22:"/magento/one/two/three";s:11:"script_name";s:18:"/magento/index.php";s:4:"skin";s:7:"default";}

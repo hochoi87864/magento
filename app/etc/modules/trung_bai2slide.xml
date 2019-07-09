@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+<modules>
+    <trung_bai2slide>
+        <active>true</active>
+        <codePool>local</codePool>
+    </trung_bai2slide>
+</modules>
+</config>

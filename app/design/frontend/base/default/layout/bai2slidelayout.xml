@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <bai2slide_index_index>
+        <reference name="left">
+            <block type="bai2slide/bai2slideblock" name="bai2slideblock" template="bai2slide/bai2slide.phtml"/>
+        </reference>
+        <reference name="head">
+            <block type="core/text" name="addcss">
+                <action method="setText">
+                    <text>
+                        <![CDATA[
+                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+                        ]]>
+                    </text>
+                </action>
+            </block>
+        </reference>
+        <reference name="head">
+            <block type="core/text" name="addItem">
+                <action method="setText">
+                    <text>
+                        <![CDATA[
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	                    <script type="text/javascript">jQuery.noConflict();</script>
+                        ]]>
+                    </text>
+                </action>
+            </block>
+        </reference>
+    </bai2slide_index_index>
+</layout>

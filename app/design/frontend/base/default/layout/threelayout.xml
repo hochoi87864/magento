@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <three_index_index>
+        <reference name="content">
+            <block type="three/threeblock" name="threeblock" template="onemoretime/three/threetemplate.phtml"/>
+        </reference>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/three/three.css</stylesheet>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/three/three1.css</stylesheet>
+            </action>
+        </reference>
+    </three_index_index>
+</layout>

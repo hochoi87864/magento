@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <two_index_index>
+        <reference name="content">
+            <block type="two/twoblock" name="twoblock" template="two/twotemplate.phtml"/>
+        </reference>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/two.css</stylesheet>
+            </action>
+<!--            <action method="addItem">-->
+<!--                <type>skin_js</type>-->
+<!--                <name>js/two.js</name>-->
+<!--            </action>-->
+        </reference>
+        <reference name="footer">
+            <block type="two/twoblock" name="twotemplatejs12311"
+                   template="two/twotemplatejs.phtml"/>
+        </reference>
+    </two_index_index>
+</layout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <onemoretime_five>
+            <active>true</active>
+            <codePool>local</codePool>
+        </onemoretime_five>
+    </modules>
+</config>

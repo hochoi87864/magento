@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <trung_bai2slide>
+            <version>0.1.0</version>
+        </trung_bai2slide>
+    </modules>
+    <frontend>
+        <routers>
+            <bai2slide>
+                <use>standard</use>
+                <args>
+                    <module>trung_bai2slide</module>
+                    <frontName>bai2slide</frontName>
+                </args>
+            </bai2slide>
+        </routers>
+        <layout>
+            <updates>
+                <bai2slide>
+                    <file>bai2slidelayout.xml</file>
+                </bai2slide>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <bai2slide>
+                <class>trung_bai2slide_block</class>
+            </bai2slide>
+        </blocks>
+    </global>
+</config>

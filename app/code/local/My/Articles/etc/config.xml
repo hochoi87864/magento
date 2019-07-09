@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <My_Articles>
+            <version>1.0.0</version>
+        </My_Articles>
+    </modules>
+    <!-- Code for the frontend -->
+    <frontend>
+        <routers>
+            <marticles>
+                <use>standard</use>
+                <args>
+                    <module>My_Articles</module>
+                    <frontName>articles</frontName>
+                </args>
+            </marticles>
+        </routers>
+    </frontend>
+    <global>
+        <!-- Code for adding tables to the database -->
+        <myarticles_recource>
+            <class>My_Articles_Model_Resource</class>
+            <entities>
+                <table_myarticles>
+                    <table>my_articles</table>
+                </table_myarticles>
+            </entities>
+        </myarticles_recource>
+    </global>
+</config>

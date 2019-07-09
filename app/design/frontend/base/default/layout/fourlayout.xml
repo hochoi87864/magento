@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <four_index_index>
+        <reference name="content">
+            <block type="four/fourblock" name="fourblock" template="onemoretime/four/fourtemplate.phtml"/>
+        </reference>
+        <reference name="left">
+            <block type="four/fourblockleft" name="fourblockleft" template="onemoretime/four/fourtemplateleft.phtml" />
+        </reference>
+        <reference name="right">
+            <block type="four/fourblock" name="fourblockright" template="onemoretime/four/fourtemplateright.phtml" />
+        </reference>
+        <reference name="footer">
+            <block type="four/fourblock" name="fourblockfooter" template="onemoretime/four/fourtemplatefooter.phtml" />
+        </reference>
+        <reference name="head">
+            <block type="four/fourblock" name="fourblockhead" template="onemoretime/four/fourtemplatehead.phtml" />
+        </reference>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/onemoretime/four/four.css</stylesheet>
+            </action>
+    </reference>
+    </four_index_index>
+</layout>

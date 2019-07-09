@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<!-- namespace_modulename -->
+		<trung_bai1hellworld>
+			<version>0.1.0</version>
+		</trung_bai1hellworld>
+	</modules>
+	<frontend>
+		<routers>
+			<!-- module_name -->
+			<bai1hellworld>
+				<use>standard</use>
+				<args>
+					<!-- trong modue là namespace_modulename -->
+					<module>trung_bai1hellworld</module>
+					<frontName>test</frontName>
+				</args>
+			</bai1hellworld>
+		</routers>
+		<layout>
+			<updates>
+				<!-- module_name -->
+				<bai1hellworld>
+					<file>bai1trunglayout.xml</file>
+				</bai1hellworld>
+			</updates>
+		</layout>
+	</frontend>
+	<global>
+		<blocks>
+			<!-- module_name -->
+			<bai1hellworld>
+				<!-- preclass của block -->
+				<class>trung_bai1hellworld_Block</class>
+			</bai1hellworld>
+		</blocks>
+	</global>
+</config>

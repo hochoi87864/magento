@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <onemoretime_two>
+            <version>0.1.0</version>
+        </onemoretime_two>
+    </modules>
+    <frontend>
+        <routers>
+            <two>
+                <use>standard</use>
+                <args>
+                    <module>onemoretime_two</module>
+                    <frontName>two</frontName>
+                </args>
+            </two>
+        </routers>
+        <layout>
+            <updates>
+                <two>
+                    <file>two.xml</file>
+                </two>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <two>
+                <class>onemoretime_two_block</class>
+            </two>
+        </blocks>
+    </global>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <trung_DtnOffice>
+            <active>true</active>
+            <codePool>local</codePool>
+        </trung_DtnOffice>
+    </modules>
+</config>

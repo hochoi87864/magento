@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <!-- Tương ứng với địa chỉ bai1hellworld/index/index index ở đây là tên controller index(2) là action của nó -->
+    <one_two_three>
+        <reference name="content">
+            <block type="one/one" name="one" template="onemoretime/onemoretime.phtml"/>
+        </reference>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/myslide.css</stylesheet>
+            </action>
+        </reference>
+        <reference name="before_body_end">
+            <block type="core/template" name="controller_tool_javascript"
+                   template="fabric/tool/controller_tool_js.phtml"/>
+        </reference>
+        <!--<reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/myslide.js</name>
+            </action>
+        </reference>-->
+    </one_two_three>
+</layout>

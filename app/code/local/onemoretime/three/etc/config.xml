@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <onemoretime_three>
+            <version>0.1.0</version>
+        </onemoretime_three>
+    </modules>
+    <frontend>
+        <routers>
+            <three>
+                <use>standard</use>
+                <args>
+                    <module>onemoretime_three</module>
+                    <frontName>three</frontName>
+                </args>
+            </three>
+        </routers>
+        <layout>
+            <updates>
+                <three>
+                    <file>threelayout.xml</file>
+                </three>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <three>
+                <class>onemoretime_three_block</class>
+            </three>
+        </blocks>
+    </global>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <My_Articles>
+            <active>true</active>
+            <codePool>local</codePool>
+        </My_Articles>
+    </modules>
+</config>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <frontend>
+        <routers>
+            <four>
+                <use>standard</use>
+                <args>
+                    <module>onemoretime_four</module>
+                    <frontName>four</frontName>
+                </args>
+            </four>
+        </routers>
+        <layout>
+            <updates>
+                <four>
+                    <file>fourlayout.xml</file>
+                </four>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <four>
+                <class>onemoretime_four_block</class>
+            </four>
+        </blocks>
+    </global>
+</config>
