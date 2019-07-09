@@ -18,24 +18,28 @@
     </frontend>
     <global>
         <resources>
-            <DtnOffice_setup>
+            <dtn_setup>
                 <setup>
                     <module>trung_DtnOffice</module>
                 </setup>
                 <connection>
                     <use>core_setup</use>
                 </connection>
-            </DtnOffice_setup>
-            <DtnOffice_write>
-                <connection>
-                    <use>core_write</use>
-                </connection>
-            </DtnOffice_write>
-            <DtnOffice_read>
-                <connection>
-                    <use>core_read</use>
-                </connection>
-            </DtnOffice_read>
+            </dtn_setup>
         </resources>
+        <models>
+            <DtnOffice>
+                <class>trung_DtnOffice_model</class>
+                <resourceModel>DtnOffice_mysql4</resourceModel>
+            </DtnOffice>
+            <DtnOffice_mysql4 >
+                <class>trung_DtnOffice_model_mysql4</class>
+                <entities>
+                    <department>
+                        <table>department</table>
+                    </department>
+                </entities>
+            </DtnOffice_mysql4>
+        </models>
     </global>
 </config>
