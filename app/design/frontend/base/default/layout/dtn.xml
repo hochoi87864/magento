@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <dtnoffice_index_index>
+        <reference name="content">
+            <block type="DtnOffice/dtnblock" name="dtnblock1" template="dtn/dtnindex.phtml" />
+        </reference>
+    </dtnoffice_index_index>
+    <dtnoffice_department_index>
+            <reference name="content">
+                <block type="DtnOffice/dtnblock" name="dtndepartmentindex" template="dtn/department/departmentindex.phtml" />
+            </reference>
+    </dtnoffice_department_index>
+</layout>

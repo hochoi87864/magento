@@ -15,8 +15,20 @@
                 </args>
             </DtnOffice>
         </routers>
+        <layout>
+            <updates>
+                <DtnOffice>
+                    <file>dtn.xml</file>
+                </DtnOffice>
+            </updates>
+        </layout>
     </frontend>
     <global>
+        <blocks>
+            <DtnOffice>
+                <class>trung_DtnOffice_block</class>
+            </DtnOffice>
+        </blocks>
         <resources>
             <dtn_setup>
                 <setup>
