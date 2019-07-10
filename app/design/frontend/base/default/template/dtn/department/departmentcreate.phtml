@@ -1,0 +1,9 @@
+<?php
+    echo "<link rel='stylesheet' type='text/css' href='http://127.0.0.1:8686/css/bootstrap.min.css'>";
+    echo "<h5>Add Department</h5>";
+    echo "<form action='".Mage::getUrl('dtn/department/handleadd')."' method='post'>";
+    echo "<div class='form-group'>";
+    echo "Department Name: <input type='text' name='dpmname' class='form-control'>";
+    echo "</div>";
+    echo "<input type='submit' class='btn btn-success' name='add' value='Add Department'>";
+    echo "</form>";

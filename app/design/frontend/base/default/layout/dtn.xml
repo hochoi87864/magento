@@ -10,4 +10,9 @@
                 <block type="DtnOffice/dtnblock" name="dtndepartmentindex" template="dtn/department/departmentindex.phtml" />
             </reference>
     </dtnoffice_department_index>
+    <dtnoffice_department_create>
+        <reference name="content">
+            <block type="DtnOffice/dtnblock" name="dtndepartmencreate" template="dtn/department/departmentcreate.phtml" />
+        </reference>
+    </dtnoffice_department_create>
 </layout>
