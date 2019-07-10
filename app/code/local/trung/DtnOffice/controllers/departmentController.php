@@ -5,7 +5,7 @@ class trung_DtnOffice_departmentController extends Mage_Core_Controller_Front_Ac
     // dùng collection class load toàn bộ deparment trong database và hiển thị dưới dạng table html.
     public function indexAction()
     {
-        $department = Mage::getModel("DtnOffice/department")->getCollection();
+        $department = Mage::getModel("DtnOffice/department")->getCollection()->addFieldToFilter('id', array('gt'=>'5'))->addFieldToFilter('name', array('like'=>'A%'));
         // load Bootstrap
         echo "<link rel='stylesheet' type='text/css' href='http://127.0.0.1:8686/css/bootstrap.min.css'>";
         echo "<center><h2 class='m-3'>Department Management</h2></center>";

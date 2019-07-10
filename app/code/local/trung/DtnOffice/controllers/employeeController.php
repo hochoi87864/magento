@@ -36,7 +36,7 @@ class trung_DtnOffice_employeeController extends Mage_Core_Controller_Front_Acti
             echo "<td>" . $value->getdob() . "</td>";
             echo "<td>" . $value->getsalary() . "</td>";
             echo "<td>" . $value->getnote() . "</td>";
-            echo "<td><a href='#'>Edit</a> || <a href='http://127.0.0.1:8686/magento/dtn/employee/delete/id/".$value->getid()."'>Delete</a></td>";
+            echo "<td><a href='http://127.0.0.1:8686/magento/dtn/employee/update/id/".$value->getid()."'>Edit</a> || <a href='http://127.0.0.1:8686/magento/dtn/employee/delete/id/".$value->getid()."'>Delete</a></td>";
             echo "</tr>";
         }
         echo "</tbody>";
@@ -81,7 +81,7 @@ class trung_DtnOffice_employeeController extends Mage_Core_Controller_Front_Acti
         echo "Date Of Birth: <input type='datetime-local' name='epl_dob' class='form-control' placeholder='Enter Date Of Birth Employee...' required>";
         echo "</div>";
         echo "<div class='form-group'>";
-        echo "Salary: <input type='number' name='epl_slr' class='form-control' placeholder='Enter Salary Employee...' required>";
+        echo "Salary: <input type='number' name='epl_slr' step='0.01' class='form-control' placeholder='Enter Salary Employee...' required>";
         echo "</div>";
         echo "<div class='form-group'>";
         echo "Note:";
@@ -148,8 +148,70 @@ transform: translate(-50%,-50%); '>";
 
     public function updateAction()
     {
-        $test = mage::getModel('DtnOffice/employee')->load(1);
-        echo $test->getdob();
+        $param = $this->getRequest()->getParams();
+        $employ_id =(int)$param['id'];
+        $employee = mage::getModel("DtnOffice/employee")->load($employ_id);
+        //add Bootstrap
+        echo "<link rel='stylesheet' type='text/css' href='http://127.0.0.1:8686/css/bootstrap.min.css'>";
+        echo "<div class='jumbotron col-5 mx-auto m-5'>";
+        echo "<center><h2 class='mb-5'>Edit Employee</h2></center>";
+        // form add a employee
+        echo "<form method='post'>";
+        echo "<div class='form-group'>";
+        $department = mage::getModel('DtnOffice/department')->getCollection();
+        echo "Department Name";
+        // load Dropdown Departmnet
+        echo "<select name='department_id' class='form-control'>";
+        foreach ($department as $value) {
+            if($value->getid()== $employee->getdepartment_id()){
+                echo "<option value='" . $value->getId() . "' selected='true'>" . $value->getName() . "</option>";
+            }
+           else{
+               echo "<option value='" . $value->getId() . "'>" . $value->getName() . "</option>";
+           }
+        }
+        echo "</select>";
+        echo "</div>";
+        echo "<div class='form-group'>";
+        echo "Email: <input type='email' name='epl_email' class='form-control' value='".$employee->getemail()."' required>";
+        echo "</div>";
+        echo "<div class='form-group'>";
+        echo "First Name: <input type='text' name='epl_fn' class='form-control' value='".$employee->getfirstname()."' required>";
+        echo "</div>";
+        echo "<div class='form-group'>";
+        echo "Last Name: <input type='text' name='epl_ln' class='form-control' value='".$employee->getlastname()."' required>";
+        echo "</div>";
+        echo "<div class='form-group'>";
+        echo "Working Years: <input type='number' name='epl_wy' class='form-control' value='".$employee->getworking_years()."' required>";
+        echo "</div>";
+        echo "<div class='form-group'>";
+        $time_dob= explode(' ',$employee->getdob());
+        echo "Date Of Birth: <input type='datetime-local' name='epl_dob' class='form-control' value='".$time_dob[0]."T".$time_dob[1]."' required>";
+        echo "</div>";
+        echo "<div class='form-group'>";
+        echo "Salary: <input type='number' name='epl_slr' step='0.01' class='form-control' value='".$employee->getsalary()."' required>";
+        echo "</div>";
+        echo "<div class='form-group'>";
+        echo "Note:";
+        echo "<textarea class='form-control' name='epl_note' rows='5'>".$employee->getnote()."</textarea>";
+        echo "</div>";
+        echo "<div class='form-group'>";
+        echo "<input type='submit' class='btn btn-success ml-5' name='edit' value='Edit Employee'><input type='reset' class='btn btn-danger ml-3' value='Reset'>";
+        echo "</div>";
+        echo "</form>";
+        echo "</div>";
+        if (isset($_POST['edit'])) {
+            $employee->setdepartment_id($_POST['department_id']);
+            $employee->setEmail($_POST['epl_email']);
+            $employee->setFirstname($_POST['epl_fn']);
+            $employee->setLastname($_POST['epl_ln']);
+            $employee->setWorking_years($_POST['epl_wy']);
+            $employee->setDob($_POST['epl_dob']);
+            $employee->setSalary($_POST['epl_slr']);
+            $employee->setnote($_POST['epl_note']);
+            $employee->save();
+            $this->_redirect('dtn/employee');
+        }
     }
 
     public function deleteAction()
