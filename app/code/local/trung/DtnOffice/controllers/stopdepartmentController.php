@@ -6,7 +6,7 @@ class trung_DtnOffice_departmentController extends Mage_Core_Controller_Front_Ac
 
     }
     public function createAction(){
-        // 
+        //
         $this->loadLayout();
         $this->renderLayout();
     }
