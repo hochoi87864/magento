@@ -5,10 +5,42 @@ class trung_DtnOffice_employeeController extends Mage_Core_Controller_Front_Acti
     // dùng collection class load toàn bộ employee trong database và hiển thị dưới dạng table html.
     public function indexAction()
     {
-        $employee = Mage::getModel('DtnOffice/employee')->getCollection();
         //load Bootstrap
         echo "<link rel='stylesheet' type='text/css' href='http://127.0.0.1:8686/css/bootstrap.min.css'>";
+        $employee = Mage::getModel('DtnOffice/employee')->getCollection();
+       /* //	Chỉ hiển thị những Employee nằm trong department ID = 5
+        $employee->addFieldToFilter('department_id',array('eq'=>'5'));
+        //•	Chỉ hiển thị những Employee có số năm làm việc >= 2
+        $employee->addFieldToFilter('working_years',array('gteq'=>'2'));
+        //•	Chỉ hiển thị những Employee có lương >= 10 triệu
+        $employee->addFieldToFilter('salary',array('gteq'=>'10'));*/
         echo "<center><h2 class='m-3'>Employee Management</h2></center>";
+        echo "<form method='post' class='col-8 mx-auto'>";
+        echo "<div class='form-inline' style='margin-left: 250px'>";
+        echo "<input type='number' name='day' class='form-control col-3' >";
+        echo "<input type='submit' name='searh' class='btn btn-warning ml-3' value='Tìm kiếm theo ngày sinh'>";
+        echo "</div>";
+        //•	Chỉ hiển thị những Employee có ngày sinh = 1 ngày tùy chọn
+        echo "</form>";
+        if(isset($_POST['searh'])){;
+            $this->_redirect('dtn/employee/index/day/'.$_POST['day']);
+        }
+        // load param
+        $param = $this->getRequest()->getParams();
+        $day = $param['day'];
+        if(!$day){
+        }
+        else{
+            // check day invalid
+            if($day>0 && $day <31){
+                $condition = array('like'=>'________'.$day.'%');
+                /*var_dump($condition);*/
+                $employee->addFieldToFilter('dob',$condition);
+            }
+            else{
+                echo "nhập chính xác ngày";
+            }
+        }
         // create table display employee
         echo "<table class='table table-stripe table-hover table-bordered col-11 mx-auto'>";
         echo "<thead style='text-align: center' class='thead-dark'>";
