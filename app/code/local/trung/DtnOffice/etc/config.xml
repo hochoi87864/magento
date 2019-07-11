@@ -2,9 +2,52 @@
 <config>
     <modules>
         <trung_DtnOffice>
-            <version>0.2.0</version>
+            <version>0.3.0</version>
         </trung_DtnOffice>
     </modules>
+    <!---->
+    <admin>
+        <routers>
+            <DtnOffice>
+                <use>admin</use>
+                <args>
+                    <module>trung_DtnOffice</module>
+                    <frontName>dtn</frontName>
+                </args>
+            </DtnOffice>
+        </routers>
+    </admin>
+    <adminhtml>
+        <menu>
+            <DtnOffice module="DtnOffice">
+                <title>DtnOffice</title>
+                <sort_order>71</sort_order>
+                <children>
+                    <items module="DtnOffice">
+                        <title>Manage Items</title>
+                        <sort_order>0</sort_order>
+                        <action>DtnOffice/adminhtml_DtnOffice</action>
+                    </items>
+                </children>
+            </DtnOffice>
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <DtnOffice>
+                            <title>[Module] Module</title>
+                            <sort_order>200</sort_order>
+                        </DtnOffice>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <!---->
     <frontend>
         <routers>
             <DtnOffice>
@@ -44,7 +87,7 @@
                 <class>trung_DtnOffice_model</class>
                 <resourceModel>DtnOffice_mysql4</resourceModel>
             </DtnOffice>
-            <DtnOffice_mysql4 >
+            <DtnOffice_mysql4>
                 <class>trung_DtnOffice_model_mysql4</class>
                 <entities>
                     <department>
@@ -56,5 +99,12 @@
                 </entities>
             </DtnOffice_mysql4>
         </models>
+        <!---->
+        <helpers>
+            <DtnOffice>
+                <class>trung_DtnOffice_helper</class>
+            </DtnOffice>
+        </helpers>
+        <!---->
     </global>
 </config>
