@@ -5,49 +5,44 @@
             <version>0.3.0</version>
         </trung_DtnOffice>
     </modules>
-    <!---->
     <admin>
         <routers>
-            <DtnOffice>
+             <DtnOffice>
                 <use>admin</use>
                 <args>
                     <module>trung_DtnOffice</module>
-                    <frontName>dtn</frontName>
+                    <frontName>admindtn</frontName>
                 </args>
-            </DtnOffice>
+             </DtnOffice>
         </routers>
     </admin>
     <adminhtml>
+        <layout>
+            <updates>
+                <DtnOffice>
+                    <file>admindtn.xml</file>
+                </DtnOffice>
+            </updates>
+        </layout>
         <menu>
-            <DtnOffice module="DtnOffice">
-                <title>DtnOffice</title>
-                <sort_order>71</sort_order>
+            <DtnOffice module="trung_DtnOffice">
+                <title>Dtn Office</title>
+                <sort_order>100</sort_order>
                 <children>
-                    <items module="DtnOffice">
-                        <title>Manage Items</title>
+                    <menuitem>
+                        <title>Departmenrt</title>
                         <sort_order>0</sort_order>
-                        <action>DtnOffice/adminhtml_DtnOffice</action>
-                    </items>
+                        <action>admindtn/adminhtml_index</action>
+                    </menuitem>
+                    <menuitem1>
+                        <title>Employee</title>
+                        <sort_order>1</sort_order>
+                        <action>admindtn/adminhtml_adminemployee</action>
+                    </menuitem1>
                 </children>
             </DtnOffice>
         </menu>
-        <acl>
-            <resources>
-                <all>
-                    <title>Allow Everything</title>
-                </all>
-                <admin>
-                    <children>
-                        <DtnOffice>
-                            <title>[Module] Module</title>
-                            <sort_order>200</sort_order>
-                        </DtnOffice>
-                    </children>
-                </admin>
-            </resources>
-        </acl>
     </adminhtml>
-    <!---->
     <frontend>
         <routers>
             <DtnOffice>
@@ -99,12 +94,10 @@
                 </entities>
             </DtnOffice_mysql4>
         </models>
-        <!---->
         <helpers>
-            <DtnOffice>
-                <class>trung_DtnOffice_helper</class>
-            </DtnOffice>
+            <trung_DtnOffice>
+                <class>trung_DtnOffice_Helper</class>
+            </trung_DtnOffice>
         </helpers>
-        <!---->
     </global>
 </config>

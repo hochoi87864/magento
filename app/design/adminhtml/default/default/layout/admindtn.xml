@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <adminhtml_adminemployee_index>
+      <reference name="content">
+          <block type ='DtnOffice/adminhtml_testblock' name="indexadmindtn" template="dtn/dtmindex.phtml"/>
+      </reference>
+    </adminhtml_adminemployee_index>
+</layout>
