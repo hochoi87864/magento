@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Codealist_BackendModule>
+            <version>0.1.0</version>
+        </Codealist_BackendModule>
+    </modules>
+    <!--Declare the route for our controller-->
+    <admin>
+        <routers>
+            <!--Unique identifier-->
+            <codealist>
+                <use>admin</use>
+                <args>
+                    <module>Codealist_BackendModule</module>
+                    <frontName>codealist</frontName>
+                </args>
+            </codealist>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <!-- Module identifier -->
+                <codealist_backendmodule>
+                    <!-- Location of our layout file should be app/design/adminhtml/default/default/layout/codealist/backendmodule.xml -->
+                    <file>backendmodule.xml</file>
+                </codealist_backendmodule>
+            </updates>
+        </layout>
+        <menu>
+            <!-- Will be a child of the System option in the menu, you can use Sales, Catalog, Newsletter, etc -->
+            <system>
+                <children>
+                    <!-- This is our module identifier -->
+                    <codealist_backendmodule>
+
+                        <title>Codealist Backend Module</title>
+                        <sort_order>400</sort_order>
+                        <!--The action composed by frontname/controller/action-->
+                        <action>codealist/adminhtml_index/index</action>
+                    </codealist_backendmodule>
+                </children>
+            </system>
+        </menu>
+    </adminhtml>
+
+</config>

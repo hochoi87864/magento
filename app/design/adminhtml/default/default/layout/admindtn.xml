@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout version="0.1.0">
-    <adminhtml_adminemployee_index>
-      <reference name="content">
-          <block type ='DtnOffice/adminhtml_testblock' name="indexadmindtn" template="dtn/dtmindex.phtml"/>
-      </reference>
-    </adminhtml_adminemployee_index>
+    <!--<dtnoffice_adminhtml_index_new>
+        <reference name="content">
+            <block type="DtnOffice/adminhtml_testblock" name="employeeblock111" template="dtn/dtnindex.phtml"/>
+        </reference>
+    </dtnoffice_adminhtml_index_new>-->
+    <dtnoffice_adminhtml_adminemployee_index>
+        <reference name="content">
+            <block type="DtnOffice/adminhtml_testblock" name="employeeblock" template="dtn/dtnindex.phtml"/>
+        </reference>
+    </dtnoffice_adminhtml_adminemployee_index>
+    <dtnoffice_adminhtml_index_index>
+        <reference name="content">
+            <block type="DtnOffice/adminhtml_departmentblock" name="departmentblock"/>
+        </reference>
+    </dtnoffice_adminhtml_index_index>
 </layout>

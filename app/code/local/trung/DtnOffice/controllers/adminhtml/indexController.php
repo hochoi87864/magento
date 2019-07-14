@@ -8,7 +8,13 @@ class trung_DtnOffice_adminhtml_indexController extends Mage_Adminhtml_Controlle
         $this->_addContent($block);*/
         $this->renderLayout();
     }
-    public function aaaAction(){
-        echo "aaa";
+    public function newAction(){
+        $this->loadLayout();
+        /*$this->_addContent($this->getLayout()->createBlock('DtnOffice/adminhtml_form_edit'))->_addContent($this->getLayout()->createBlock('DtnOffice/adminhtml_form_edit_tabs'));*/
+        $this->renderLayout();
+    }
+    public function saveAction() {
+        if ($data = $this->getRequest()->getPost()) {
+        }
     }
 }

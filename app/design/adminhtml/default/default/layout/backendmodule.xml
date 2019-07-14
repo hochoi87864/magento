@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout>
+
+    <!--FrontName_Controller_Action-->
+    <codealist_adminhtml_index_index>
+        <!--We will include a block in the main container of the page: content-->
+        <reference name="content">
+            <!--Our template file will be created on
+            app/design/adminhtml/default/default/template/codealist/backendmodule.phtml-->
+            <block type="core/template" name="codealist" template="codealist/backendmodule.phtml"/>
+        </reference>
+    </codealist_adminhtml_index_index>
+
+</layout>

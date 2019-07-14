@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <frontend>
+        <routers>
+            <six>
+                <args>
+                    <onemoretime_six before="Mage_adminhtml">onemoretime_six</onemoretime_six>
+                </args>
+            </six>
+        </routers>
+    </frontend>
+</config>
