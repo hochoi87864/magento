@@ -1,6 +1,6 @@
 <?php
 
-class trung_DtnOffice_adminhtml_indexController extends Mage_Adminhtml_Controller_Action
+class trung_DtnOffice_adminhtml_departmentController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction(){
         $this->loadLayout();
@@ -13,8 +13,8 @@ class trung_DtnOffice_adminhtml_indexController extends Mage_Adminhtml_Controlle
         /*$this->_addContent($this->getLayout()->createBlock('DtnOffice/adminhtml_form_edit'))->_addContent($this->getLayout()->createBlock('DtnOffice/adminhtml_form_edit_tabs'));*/
         $this->renderLayout();
     }
-    public function saveAction() {
+/*    public function saveAction() {
         if ($data = $this->getRequest()->getPost()) {
         }
-    }
+    }*/
 }
